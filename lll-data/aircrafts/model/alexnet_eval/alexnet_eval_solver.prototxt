@@ -1,0 +1,17 @@
+net: "data/aircrafts/model/alexnet_eval/alexnet_eval_train_val.prototxt"
+test_iter: 1111
+test_interval: 2500
+test_initialization: true
+base_lr: 0.001
+lr_policy: "step"
+gamma: 0.1
+stepsize: 10
+display: 20
+max_iter: 20
+momentum: 0.9
+weight_decay: 0.0005
+snapshot: 5000
+snapshot_after_train: false
+snapshot_prefix: "data/aircrafts/model/alexnet_eval/snapshot/aircrafts_alexnet_eval_train"
+solver_mode: GPU
+random_seed: 64
