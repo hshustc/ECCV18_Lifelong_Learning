@@ -1,0 +1,6 @@
+@inproceedings{hou2018lifelong
+  title={Lifelong Learning via Progressive Distillation and Retrospection},
+  author={Hou, Saihui and Pan, Xinyu and Loy, Chen Change and Wang, Zilei and Lin, Dahua},
+  booktitle={Proceedings of the European Conference on Computer Vision (ECCV)},
+  year={2018}
+}

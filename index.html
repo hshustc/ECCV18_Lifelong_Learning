@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lifelong Learning via Progressive Distillation and Retrospection</title>
+    <meta property="og:title" content="Lifelong Learning via Progressive Distillation and Retrospection">
+    <meta property="og:type" content="website">
+    <link href="lib/normalize.css" type="text/css" rel="stylesheet">
+    <link href="lib/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link href="main.css" type="text/css" rel="stylesheet">
+    <script src="//use.typekit.net/ulc1wme.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+  </head>
+  <body>
+    <div class="header"><div class="container">
+      <h1 class="logo">Lifelong Learning via<br/>Progressive Distillation and Retrospection</h1>
+      <div class="tagline">
+        <a href="http://home.ustc.edu.cn/~saihui/index_english.html" target="_blank" style="color:inherit">Saihui Hou</a><sup>1*</sup>&nbsp;&nbsp;&nbsp;
+        <a href="http://piffnp.github.io/" target="_blank" style="color:inherit">Xinyu Pan</a><sup>2*</sup>&nbsp;&nbsp;&nbsp;
+        <a href="http://personal.ie.cuhk.edu.hk/~ccloy" target="_blank" style="color:inherit">Chen Change Loy</a><sup>3</sup>&nbsp;&nbsp;&nbsp;
+        <a href="http://staff.ustc.edu.cn/~zlwang/index_en.html" target="_blank" style="color:inherit">Zilei Wang</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
+        <a href="http://dahua.me" target="_blank" style="color:inherit">Dahua Lin</a><sup>2</sup>&nbsp;&nbsp;&nbsp;<br><br>
+        <sup>1</sup> University of Science and Technology of China&nbsp;&nbsp;&nbsp;&nbsp;
+        <sup>2</sup> The Chinese Univeristy of Hong Kong&nbsp;&nbsp;&nbsp;&nbsp;<br>
+        <sup>3</sup> Nanyang Technological University&nbsp;&nbsp;&nbsp;&nbsp;
+        [* indicates joint first authorship]
+      </div>
+      <div class="cta">
+          <a href="res/0833.pdf" role="button"><i class="fa fa-file-pdf-o"></i> Paper</a>
+          <a href="http://github.com/hshustc/ECCV18_Lifelong_Learning" role="button"><i class="fa fa-github"></i> Code</a>
+          <a href="res/eccv18_lifelong_bib.txt" role="button"><i class="fa fa-quote-right"></i> Bib</a>
+      </div>
+    </div></div>
+
+    <div class="main"><div class="container">
+      <img width=960px alt="" src="res/distillation_retrospection.png">
+      <p class="caption">Fig 1.&nbsp;Illustration of <i>Distillation</i> and <i>Retrospection</i>.</p>
+      <h2>Abstract</h2>
+      Lifelong learning aims at adapting a learned model to new tasks while retaining the knowledge gained earlier.
+      A key challenge for lifelong learning is how to strike a balance between the preservation on old tasks and the
+      adaptation to a new one within a given model. Approaches that combine both objectives in training have been explored
+      in previous works. Yet the performance still suffers from considerable degradation in a long sequence of tasks.
+      In this work, we propose a novel approach to lifelong learning, which tries to seek a better balance between 
+      preservation and adaptation via two techniques: Distillation and Retrospection. Specifically, the target model
+      adapts to the new task by knowledge distillation from an intermediate expert, while the previous knowledge is
+      more effectively preserved by caching a small subset of data for old tasks. The combination of Distillation and
+      Retrospection leads to a more gentle learning curve for the target model, and extensive experiments demonstrate
+      that our approach can bring consistent improvements on both old and new tasks.<br>
+
+      <h2>Architcture</h2>
+      <img width=960px alt="" src="res/network_structures.png">
+      <p class="caption">Fig 2.&nbsp;Illustration of network structures for <i>Distillation</i>+<i>Retrospection</i>.</p>
+
+      <h2>Performance</h2>
+      <p class="long_caption">Table 1.&nbsp;Classification accuracy (%) for two-task scenario. <i>Feature Extraction</i>
+      provides the reference performance for the first task while <i>Finetuning</i> provides the reference for the second one.
+      <i>D</i> for <i>Distillation</i>, and <i>R</i> for <i>Retrospection</i>.</p>
+      <img width=960px alt="" src="res/t1.png">
+      <img width=960px alt="" src="res/t2.png">
+
+      <p class="long_caption">Table 2.&nbsp;Classification accuracy (%) for five-task scenario. The results are reported at
+      the end of the last training stage. <i>LwF</i> is treated as the baseline here.</p>
+      <img width=960px alt="" src="res/t3.png">
+
+      <table style="width:960px" align="center">
+            <tr>
+                <td><img width=450px alt="" src="res/track_imagenet_seq1.png"></td>
+                <td><img width=450px alt="" src="res/track_imagenet_seq2.png"></td>
+            </tr>
+            <tr align="center">
+                <td>(a)&nbsp;Imagenet&rarr;Scenes&rarr;Birds&rarr;Flowers&rarr;Aircrafts.</td>
+                <td>(b)&nbsp;Imagenet&rarr;Birds&rarr;Flowers&rarr;Aircrafts&rarr;Scenes.</td>
+            </tr>
+      </table>
+      <p class="caption">Fig 3.&nbsp;Accuracy degradation on ImageNet in five-task scenario.
+      <b>D</b> for <i>Distillation</i>, and <b>R</b> for <i>Retrospection</i>.</p>
+    </div></div>
+
+    <div class="footer"><div class="container">
+      <div class="updated">Updated Sep 2018</div>
+    </div></div>
+
+    <script>
+        // TODO maybe google analytics
+    </script>
+  </body>
+</html>
+
