@@ -9,7 +9,9 @@ make -j  12
 ln -s ../lll-data data
 ```
 3. Download the pretrained models from the following links and put them in the ``./lll-models``.
-[Link1](http://rec.ustc.edu.cn/s/jma3ej) (Password: [wcdfwu](wcdfwu))
+
+[Link1](http://rec.ustc.edu.cn/s/jma3ej) (Password: wcdfwu)
+
 4. Generate the lmdb for each dataset in the ``./lll-data`` according to the provided image list.
 ```
 #Take Flowers as an example
