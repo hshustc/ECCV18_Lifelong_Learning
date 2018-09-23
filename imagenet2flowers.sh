@@ -24,13 +24,13 @@ sh data/flowers/model/SLPDA_alexnet_KD_from_imagenet/v2_SLPDA_alexnet_KD_from_im
 cd lll-caffe/data/eval
 #1. Learn without Forgetting (LwF)
 ./lll_eval.sh KDimagenet2flowers flowers model alexnet_KD_from_imagenet v2_alexnet_KD_from_imagenet 15000 0 #on Flowers
-./lll_eval.sh KDimagenet2flowers flowers model alexnet_KD_from_imagenet v2_alexnet_KD_from_imagenet 15000 0 #on ImageNet
+./lll_eval.sh KDimagenet2flowers imagenet model alexnet_KD_from_imagenet v2_alexnet_KD_from_imagenet 15000 0 #on ImageNet
 #2. Distillation (D)
 ./lll_eval.sh KDimagenet2flowers flowers model alexnetSL_KD_from_imagenet v2_alexnetSL_KD_from_imagenet 15000 0 #on Flowers
-./lll_eval.sh KDimagenet2flowers flowers model alexnetSL_KD_from_imagenet v2_alexnetSL_KD_from_imagenet 15000 0 #on ImageNet
+./lll_eval.sh KDimagenet2flowers imagenet model alexnetSL_KD_from_imagenet v2_alexnetSL_KD_from_imagenet 15000 0 #on ImageNet
 #3. LwF+Retrospection (R)
 ./lll_eval.sh KDimagenet2flowers flowers model alexnetPDA_KD_from_imagenet v2_alexnetPDA_KD_from_imagenet 15000 0 #on Flowers
-./lll_eval.sh KDimagenet2flowers flowers model alexnetPDA_KD_from_imagenet v2_alexnetPDA_KD_from_imagenet 15000 0 #on ImageNet
+./lll_eval.sh KDimagenet2flowers imagenet model alexnetPDA_KD_from_imagenet v2_alexnetPDA_KD_from_imagenet 15000 0 #on ImageNet
 #4. Distillation+Retrospection (D+R)
 ./lll_eval.sh KDimagenet2flowers flowers model SLPDA_alexnet_KD_from_imagenet v2_SLPDA_alexnet_KD_from_imagenet 15000 0 #on Flowers
-./lll_eval.sh KDimagenet2flowers flowers model SLPDA_alexnet_KD_from_imagenet v2_SLPDA_alexnet_KD_from_imagenet 15000 0 #on ImageNet
+./lll_eval.sh KDimagenet2flowers imagenet model SLPDA_alexnet_KD_from_imagenet v2_SLPDA_alexnet_KD_from_imagenet 15000 0 #on ImageNet
